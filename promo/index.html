@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kubb at the Cottage</title>
+<meta name="description" content="Kubb, the lawn game, at the cottage. Knock the kubbs down, then the king. Win a weekend of lawn tournaments and pick a new power after every win. Play free on your phone at kubbgame.ca.">
+<meta property="og:title" content="Kubb at the Cottage">
+<meta property="og:description" content="Kubb, the lawn game, at the cottage. Knock the kubbs down, then the king. Win a weekend of lawn tournaments and pick a new power after every win. Play free on your phone at kubbgame.ca.">
+<meta property="og:url" content="https://kubbgame.ca/promo/">
+<meta property="og:image" content="https://kubbgame.ca/promo/media/poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.png">
+</head>
+<body>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Kubb at the Cottage">
+<meta property="og:description" content="Knock the kubbs down, then the king. Win the weekend, one power at a time. Play free at kubbgame.ca.">
+<meta property="og:image" content="media/poster.jpg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredoka:wght@400;500;600&display=swap">
+<style>
+/* Layout: the v1 summer poster (docs/promo/index.html), now telling the game section by section: the trailer as
+   the hero, then the throw, the lawn, the powers, the bag, the ladder, the County final and what stays. Phone first:
+   one column, with grids opening up from 760 px. Pixel art stays crisp (image-rendering: pixelated). */
+:root {
+  --cream: #faf0d8; --sand: #f4e4c1; --dusk: #f4c78c; --red: #c8483a; --lake: #2f6f8f; --pine: #2f5d3a; --ink: #2b2a33; --soft: #6b5a4a;
+  --display: "Bebas Neue", "Arial Narrow", Impact, sans-serif; --body: "Fredoka", "Trebuchet MS", system-ui, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { overflow-x: hidden; }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.5; }
+a { color: var(--lake); }
+img, video { max-width: 100%; }
+.wrap { max-width: 1040px; margin: 0 auto; padding-inline: 16px; }
+.hero { background: linear-gradient(180deg, #95b6c8 0%, #dcd5b4 30%, var(--dusk) 62%, #eca068 100%); padding-block: 36px 0; overflow: hidden; }
+.hero .wrap { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: end; }
+.title { text-align: center; }
+.invite { font-size: 18px; font-weight: 600; color: var(--lake); margin: 0 0 4px; }
+.title h1 { font-family: var(--display); font-weight: 400; font-size: clamp(96px, 16vw, 200px); line-height: 0.85; margin: 0; color: var(--cream); text-shadow: 6px 6px 0 var(--ink); letter-spacing: 2px; }
+.title .tag { font-family: var(--display); font-size: clamp(32px, 4.4vw, 48px); line-height: 1; color: var(--red); margin: 12px 0 16px; text-shadow: 2px 2px 0 var(--cream); letter-spacing: 1px; }
+.title p { max-width: 34ch; margin: 0 auto 22px; font-size: 18px; }
+.play { display: inline-flex; align-items: center; gap: 12px; background: var(--red); color: var(--cream); text-decoration: none; font-family: var(--display); font-size: 34px; letter-spacing: 1px; padding: 12px 28px 8px; border-radius: 999px; box-shadow: 0 6px 0 #8e3027; }
+.play:hover { transform: translateY(1px); box-shadow: 0 5px 0 #8e3027; }
+.play:focus-visible { outline: 4px solid var(--lake); outline-offset: 4px; }
+.sub { font-size: 15px; color: var(--soft); margin-top: 14px; }
+.phone { justify-self: center; width: min(340px, 100%); background: var(--ink); border-radius: 36px 36px 0 0; padding: 12px 12px 0; }
+.phone video { display: block; width: 100%; aspect-ratio: 9 / 16; border-radius: 26px 26px 0 0; background: var(--sand); object-fit: cover; }
+.band { height: 18px; background: var(--red); }
+.band + .band { height: 44px; background: var(--lake); }
+section { padding-block: 56px; }
+h2 { font-family: var(--display); font-weight: 400; font-size: clamp(44px, 7vw, 72px); line-height: 0.95; margin: 0 0 12px; color: var(--red); letter-spacing: 1px; text-wrap: balance; }
+.lede { max-width: 60ch; margin: 0 0 24px; color: var(--soft); }
+.split { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center; }
+.lines { list-style: none; padding: 0; margin: 0 0 20px; }
+.lines li { padding: 10px 0; border-top: 3px solid var(--sand); font-size: 18px; }
+.lines li:last-child { border-bottom: 3px solid var(--sand); }
+.lines b { color: var(--ink); }
+.rule { background: var(--red); color: var(--cream); border-radius: 14px; padding: 14px 18px; font-weight: 500; margin: 0; }
+.rule b { font-family: var(--display); font-weight: 400; font-size: 26px; letter-spacing: 0.5px; display: block; line-height: 1; margin-bottom: 4px; }
+figure { margin: 0; }
+.shot img, .shot video { display: block; width: 100%; border-radius: 12px; image-rendering: pixelated; box-shadow: 0 4px 0 rgba(43,42,51,0.15); background: var(--sand); }
+.shot video { aspect-ratio: 9 / 16; object-fit: cover; }
+.tall img { aspect-ratio: 3 / 4; object-fit: cover; }
+figcaption { font-size: 14px; color: var(--soft); margin-top: 6px; }
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.trio { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.phonelike { width: min(320px, 100%); justify-self: center; }
+.powers { background: var(--pine); color: var(--cream); }
+.powers h2 { color: var(--dusk); }
+.powers .lede { color: #d8e4cf; }
+.kinds { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 0 0 28px; padding: 0; list-style: none; }
+.kinds li { color: #d8e4cf; font-size: 16px; }
+.kinds b { font-family: var(--display); font-weight: 400; font-size: 26px; color: var(--cream); letter-spacing: 0.5px; margin-right: 6px; }
+.clips { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.clips figcaption { color: #e9efe2; font-size: 15px; font-weight: 500; }
+.days { list-style: none; padding: 0; margin: 0 0 20px; }
+.days li { padding: 10px 0; border-top: 3px solid var(--sand); }
+.days b { font-family: var(--display); font-weight: 400; font-size: 26px; color: var(--ink); letter-spacing: 0.5px; display: block; line-height: 1; }
+.county { background: linear-gradient(180deg, var(--dusk), #eca068); }
+.county h2 { color: var(--ink); }
+.county .lede { color: #4a3a2c; }
+.stays { list-style: none; padding: 0; margin: 0; columns: 1; }
+.stays li { padding: 8px 0; border-top: 3px solid var(--sand); break-inside: avoid; }
+.foot { background: var(--lake); color: var(--cream); text-align: center; }
+.foot h2 { color: var(--cream); }
+.foot p { color: #dcecf2; margin: 0 auto 24px; max-width: 46ch; }
+.foot .porch { max-width: 560px; margin: 0 auto 28px; }
+.foot .porch img { border-radius: 16px; box-shadow: 0 6px 0 rgba(0,0,0,0.2); }
+.foot .play { font-size: clamp(24px, 7vw, 34px); white-space: nowrap; }
+.foot .alt { display: block; margin-top: 18px; color: var(--cream); }
+.credits { font-size: 14px; color: var(--soft); padding-block: 28px 40px; }
+@media (min-width: 760px) {
+  .wrap { padding-inline: 24px; }
+  .hero { padding-top: 48px; }
+  .hero .wrap { grid-template-columns: 1.1fr 0.9fr; gap: 40px; }
+  .title { text-align: left; padding-bottom: 64px; }
+  .title p { margin-inline: 0; }
+  .split { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .split.flip > :first-child { order: 2; }
+  .trio { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .kinds { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 32px; }
+  .clips { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .stays { columns: 2; column-gap: 32px; }
+}
+@media (prefers-reduced-motion: reduce) { .play { transition: none; } }
+</style>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="title">
+      <p class="invite">Come up to the cottage.</p>
+      <h1>KUBB</h1>
+      <div class="tag">Bring the Old King home.</div>
+      <p>Throw wooden batons at the other side's kubbs, then knock over the king. Win your way through a weekend of lawn tournaments, and pick a new power after every win.</p>
+      <a class="play" href="https://kubbgame.ca/">Play free</a>
+      <div class="sub">On your phone or computer. Nothing to install.</div>
+    </div>
+    <div class="phone">
+      <video src="media/trailer.mp4" poster="media/trailer-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="Trailer: wooden batons knock kubbs over on cottage lawns, powers go off, and a player climbs a tournament ladder to win the County final."></video>
+    </div>
+  </div>
+</header>
+<div class="band"></div><div class="band"></div>
+
+<main>
+  <section class="wrap">
+    <div class="split">
+      <div>
+        <h2>Pull back and let go</h2>
+        <ul class="lines">
+          <li>Pull back with one thumb to aim.</li>
+          <li>The circle shows where your baton can land.</li>
+          <li>The grass decides the rest.</li>
+        </ul>
+        <p class="rule"><b>The rule</b>Field kubbs first, then the baseline. The king goes last. Hit him early and you lose.</p>
+      </div>
+      <figure class="shot phonelike">
+        <video src="media/clip-pull.mp4" poster="media/s1-aim.jpg" autoplay muted loop playsinline preload="none" aria-label="Aiming a throw: a dotted arc and a landing circle 7.7 metres up the lawn, then the baton knocks a kubb over."></video>
+        <figcaption>The circle shows where it can land.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>Every throw counts</h2>
+    <ul class="lines">
+      <li>Wind gusts. The lawn has a slope.</li>
+      <li>Morning dew makes the grass slick until it dries.</li>
+      <li>On Sunday, the grounds crew runs the sprinkler.</li>
+      <li>Every rival shows their kit and their habit before you play. Learn it, and beat it.</li>
+    </ul>
+    <div class="pair">
+      <figure class="shot tall"><img src="media/s2-two.jpg" alt="Two wooden kubbs falling from one throw." loading="lazy"><figcaption>Two with one.</figcaption></figure>
+      <figure class="shot tall"><img src="media/s3-rival.jpg" alt="Coach Bev's rival card, showing her powers and her habit of whistling." loading="lazy"><figcaption>Coach Bev whistles when you're close.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="powers">
+    <div class="wrap">
+      <h2>Powers at work</h2>
+      <p class="lede">33 powers in five kinds. You start with a few and pick up more as you win.</p>
+      <ul class="kinds">
+        <li><b>Guards</b> sit on your kubbs and look after them by themselves.</li>
+        <li><b>Tricks</b> change one baton for one throw. Heavy, Boomerang, Curve, Firecracker.</li>
+        <li><b>Skills</b> are always with you, nothing to tap.</li>
+        <li><b>Picnic treats</b> are one use each, then gone. Lemonade, butter tarts, a sun hat.</li>
+        <li><b>Specials</b> build as you knock kubbs over, then you let them go.</li>
+      </ul>
+      <div class="clips">
+        <figure class="shot"><video src="media/clip-firecracker.mp4" poster="media/s4-firecracker.jpg" autoplay muted loop playsinline preload="none" aria-label="A Firecracker baton bursting, knocking three kubbs over at once."></video><figcaption>Pops where it lands. Everything close goes over.</figcaption></figure>
+        <figure class="shot"><video src="media/clip-shield.mp4" poster="media/s5-shield.jpg" autoplay muted loop playsinline preload="none" aria-label="A kubb inside a Shield bubble, with 'Shield!' over it as a baton bounces off."></video><figcaption>Batons bounce right off.</figcaption></figure>
+        <figure class="shot"><video src="media/clip-heavy.mp4" poster="media/s5b-heavy.jpg" autoplay muted loop playsinline preload="none" aria-label="A heavy baton breaking a Shield and knocking the kubb over."></video><figcaption>Breaks straight through a Shield.</figcaption></figure>
+        <figure class="shot"><video src="media/clip-sprinkler.mp4" poster="media/s6-sprinkler.jpg" autoplay muted loop playsinline preload="none" aria-label="A sprinkler spraying the rival's thrower, making their landing circle bigger."></video><figcaption>Soaks the rival. Their throws go wide.</figcaption></figure>
+        <figure class="shot"><video src="media/clip-biscuit.mp4" poster="media/s7-biscuit.jpg" autoplay muted loop playsinline preload="none" aria-label="Biscuit the dog running off with a baton while his owner calls after him."></video><figcaption>The dog runs off with their baton.</figcaption></figure>
+        <figure class="shot"><video src="media/clip-domino.mp4" poster="media/s7b-domino.jpg" autoplay muted loop playsinline preload="none" aria-label="A tight group of four kubbs going over from one throw."></video><figcaption>Your returns land close. One throw takes four.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>Every win grows your bag</h2>
+    <ul class="lines">
+      <li><b>The pick:</b> win a match, pick one of three powers.</li>
+      <li><b>The shops:</b> spend your loonies at Hazel's stand and Norm's store.</li>
+      <li><b>The dock:</b> train a power up a level with Grandpa.</li>
+      <li>Take a bet if you dare. Lose it and you're going home.</li>
+    </ul>
+    <div class="pair">
+      <figure class="shot tall"><img src="media/s8-reward.jpg" alt="Three power cards to pick from after a win." loading="lazy"><figcaption>Pick one of three.</figcaption></figure>
+      <figure class="shot tall"><img src="media/s9-store.jpg" alt="Norm's general store shelf with powers for sale in loonies." loading="lazy"><figcaption>Norm's store, priced in loonies.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="split flip">
+      <div>
+        <h2>Climb the Lawn Ladder</h2>
+        <p class="lede">Three days, three brackets, twelve matches. Win, and your marker walks up the ladder to the final. Each day the wind picks up, the rivals bring more powers, and someone good waits at the top.</p>
+        <ul class="days">
+          <li><b>Friday, the Family Trials</b>Beat the family on the cottage lawn. Cousin Vic waits in the final.</li>
+          <li><b>Saturday, the Brass Minnow</b>The lake's best at Norm's marina, in the wind. Lakeside Laurie in the final.</li>
+          <li><b>Sunday, the County</b>The fair, the grandstand, and Pearl Lachance.</li>
+        </ul>
+        <div class="pair">
+          <figure class="shot tall"><img src="media/s10-friday.jpg" alt="The Friday bracket drawn on the cottage lawn, with your path to the final in red." loading="lazy"><figcaption>Friday's ladder on the cottage lawn.</figcaption></figure>
+          <figure class="shot tall"><img src="media/s10b-saturday.jpg" alt="The Saturday bracket over Norm's marina." loading="lazy"><figcaption>Saturday at the marina.</figcaption></figure>
+        </div>
+      </div>
+      <figure class="shot phonelike">
+        <video src="media/clip-sunday.mp4" poster="media/s10c-sunday.jpg" autoplay muted loop playsinline preload="none" aria-label="The Sunday bracket in front of the County grandstand, with a red marker walking up to the final."></video>
+        <figcaption>Sunday, up to the final.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="county">
+    <div class="wrap split">
+      <div>
+        <h2>The County final</h2>
+        <p class="lede">Best of three against Pearl Lachance on the centre pitch. She's won the County five years running, and her notebook has an answer for your two strongest powers. Win, and the grandstand is on its feet.</p>
+        <p class="lede">She's had the Old King on her mantel since 1992.</p>
+      </div>
+      <figure class="shot phonelike">
+        <video src="media/clip-final.mp4" poster="media/s11-final.jpg" autoplay muted loop playsinline preload="none" aria-label="The County final at sunset: the king falling, confetti, and the grandstand cheering."></video>
+        <figcaption>He's coming home!</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>Come back for another weekend</h2>
+    <p class="lede">Win or lose, some things stay at the cottage.</p>
+    <div class="split">
+      <ul class="stays">
+        <li><b>Grandpa's door:</b> ten rungs of clothes to earn.</li>
+        <li><b>Nana's jar:</b> spare loonies buy a wind chime, Muskoka chairs, a canoe.</li>
+        <li><b>70 stickers</b> to find, some of them secret.</li>
+        <li><b>Heirlooms</b> that change the rules, each with a cost.</li>
+        <li><b>New starter bags</b> to pack.</li>
+        <li><b>Chill, Classic or Cutthroat.</b> Cutthroat opens up later.</li>
+        <li><b>Pass and play:</b> two of you, one phone.</li>
+      </ul>
+      <div class="pair">
+        <figure class="shot tall"><img src="media/pearl.jpg" alt="Pearl Lachance handing the Old King, a carved wooden king, to the player." loading="lazy"><figcaption>Pearl brings him over.</figcaption></figure>
+        <figure class="shot tall"><img src="media/s12-album.jpg" alt="A sticker album page, some stickers earned and some still pencil sketches." loading="lazy"><figcaption>70 stickers to find.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="foot">
+    <div class="wrap">
+      <h2>Come up to the cottage</h2>
+      <figure class="shot porch"><img src="media/porch.jpg" alt="The cottage porch at dusk under string lights." loading="lazy"></figure>
+      <p>Free, on your phone or computer. One weekend, and then probably another.</p>
+      <a class="play" href="https://kubbgame.ca/" style="background: var(--cream); color: var(--red); box-shadow: 0 6px 0 #c8b892;">Play free at kubbgame.ca</a>
+      <a class="alt" href="https://joshlitwin.itch.io/kubb">Also on itch.io</a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap credits">
+  Made by Josh Litwin with Claude. Built with Phaser. Music: "Gone Fishin'" by Memoraphile, "Boss Fight" by Junkala and "Victory" by celestialghost8 (all CC0). Fonts: Bebas Neue and Fredoka (SIL Open Font License).
+</footer>
+
+</body>
+</html>
