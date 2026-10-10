@@ -63,6 +63,7 @@ h2 { font-family: var(--display); font-weight: 400; font-size: 2.3rem; line-heig
   text-decoration: none;
   box-shadow: 0 5px 0 #b07a12;
 }
+.off { justify-self: start; color: var(--ink-soft); font-size: 0.95rem; padding: 6px 2px; }
 .go:active { transform: translateY(3px); box-shadow: 0 2px 0 #b07a12; }
 .go:focus-visible { outline: 4px solid var(--ink); outline-offset: 3px; }
 footer { text-align: center; color: #fff8e6; font-size: 0.95rem; line-height: 1.5; }
@@ -87,6 +88,19 @@ footer a { color: #fff8e6; }
       <li>Send your results at the end</li>
     </ul>
     <a class="go" href="../?timinglab=1&amp;from=camp">Start the Timing lab</a>
+  </section>
+
+  <section class="card" aria-labelledby="breath-weekend">
+    <span class="tag">New</span>
+    <h2 id="breath-weekend">Breathing circle, for real</h2>
+    <p>Play the real game with the breathing circle on: your aim circle breathes while you hold, so let go when it's small. Each throw leaves an X where it landed. It stays on in this browser until you turn it off.</p>
+    <ul class="facts">
+      <li>Your whole weekend</li>
+      <li>Rivals don't change</li>
+      <li>Send notes from Settings</li>
+    </ul>
+    <a class="go" href="../?timing=breath">Turn it on and play</a>
+    <a class="off" href="../?timing=off">Turn it off</a>
   </section>
 
   <section class="card" aria-labelledby="aim-lab">
