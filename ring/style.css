@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #0f0f0f;
+    overscroll-behavior: none;
+}
+
+#app {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Dragging on the canvas aims a throw; it must not scroll or zoom the page. */
+canvas {
+    touch-action: none;
+}
