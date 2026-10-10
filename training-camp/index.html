@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="stylesheet" href="../fonts.css">
+<title>Kubb Training Camp</title>
+<meta name="description" content="Try new ideas for Kubb: a cottage weekend before they reach the game.">
+<style>
+/* The camp's notice board: the game's poster colours, one paper card per test, pinned on a lawn green. */
+:root {
+  --lawn: #86bd57;
+  --lawn-deep: #6f9a4a;
+  --paper: #fcf1da;
+  --paper-edge: #6b4423;
+  --ink: #3b2614;
+  --ink-soft: #7a5d40;
+  --red: #c8483a;
+  --gold: #f5bf4f;
+  --display: 'Bebas Neue', 'Fredoka', 'Trebuchet MS', sans-serif;
+  --body: 'Fredoka', 'Nunito', 'Trebuchet MS', sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  min-height: 100vh;
+  background: var(--lawn);
+  background-image: repeating-linear-gradient(180deg, rgba(255, 250, 210, 0.1) 0 48px, transparent 48px 96px);
+  color: var(--ink);
+  font-family: var(--body);
+  font-weight: 600;
+  padding: max(24px, env(safe-area-inset-top, 0px)) 16px max(32px, env(safe-area-inset-bottom, 0px));
+}
+main { max-width: 34rem; margin: 0 auto; display: grid; gap: 20px; }
+header { text-align: center; color: #fff8e6; text-shadow: 0 3px 0 var(--lawn-deep); }
+h1 { font-family: var(--display); font-weight: 400; font-size: clamp(3rem, 14vw, 4.5rem); line-height: 0.9; letter-spacing: 0.02em; margin: 0; }
+header p { margin: 8px 0 0; font-size: 1.05rem; line-height: 1.4; text-wrap: balance; }
+.card {
+  background: var(--paper);
+  border: 4px solid var(--paper-edge);
+  border-radius: 22px;
+  box-shadow: 0 8px 0 rgba(58, 36, 16, 0.18);
+  padding: 20px 20px 22px;
+  display: grid;
+  gap: 10px;
+}
+.tag { justify-self: start; background: var(--red); color: #fff6e0; border-radius: 999px; padding: 3px 12px; font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; }
+h2 { font-family: var(--display); font-weight: 400; font-size: 2.3rem; line-height: 1; margin: 2px 0 0; color: var(--red); }
+.card p { margin: 0; line-height: 1.45; color: var(--ink); }
+.facts { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px 14px; color: var(--ink-soft); font-size: 0.95rem; }
+.go {
+  justify-self: start;
+  margin-top: 6px;
+  display: inline-block;
+  background: var(--gold);
+  color: #2b1d10;
+  border: 3px solid #b07a12;
+  border-radius: 18px;
+  padding: 12px 28px;
+  font-size: 1.15rem;
+  text-decoration: none;
+  box-shadow: 0 5px 0 #b07a12;
+}
+.go:active { transform: translateY(3px); box-shadow: 0 2px 0 #b07a12; }
+.go:focus-visible { outline: 4px solid var(--ink); outline-offset: 3px; }
+footer { text-align: center; color: #fff8e6; font-size: 0.95rem; line-height: 1.5; }
+footer a { color: #fff8e6; }
+@media (prefers-reduced-motion: reduce) { .go:active { transform: none; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Training camp</h1>
+    <p>New ideas for the game, to try before they reach the weekend. Thanks for testing.</p>
+  </header>
+
+  <section class="card" aria-labelledby="aim-lab">
+    <span class="tag">Open now</span>
+    <h2 id="aim-lab">Aim lab</h2>
+    <p>A few different ways of aiming, one per round. Throw at the kubb in the gold ring and rate how each round feels. You won't know which is which until the end.</p>
+    <ul class="facts">
+      <li>8 rounds of 7 throws</li>
+      <li>About 10 minutes</li>
+      <li>Send your results at the end</li>
+    </ul>
+    <a class="go" href="../?aimlab=1&amp;from=camp">Start the Aim lab</a>
+  </section>
+
+  <footer>
+    New tests show up here as we try them.<br>
+    <a href="../">Play the game</a>
+  </footer>
+</main>
+</body>
+</html>
