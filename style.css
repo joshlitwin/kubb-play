@@ -20,3 +20,56 @@ body {
 canvas {
     touch-action: none;
 }
+
+/* The title card over the page while the game loads (index.html). Cream paper and brown ink, as in
+   the game's panels (src/game/ui.ts). Above the canvas, under the account and feedback sheets. */
+#splash {
+    position: fixed;
+    inset: 0;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 0 16px;
+    background: #fcf1da;
+    color: #3b2614;
+    transition: opacity 400ms ease-out;
+}
+
+#splash.leaving {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.splash-title {
+    font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
+    font-size: clamp(88px, 24vmin, 180px);
+    line-height: 0.9;
+    letter-spacing: 0.04em;
+}
+
+.splash-line {
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    font-size: clamp(24px, 6vmin, 36px);
+    color: #7a5d40;
+}
+
+.splash-dots span {
+    animation: splash-dot 1.2s ease-in-out infinite;
+}
+
+.splash-dots span:nth-child(2) { animation-delay: 0.2s; }
+.splash-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes splash-dot {
+    0%, 60%, 100% { opacity: 0.25; }
+    30% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .splash-dots span { animation: none; }
+    #splash { transition: none; }
+}
