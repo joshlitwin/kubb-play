@@ -11,7 +11,7 @@
     <link rel="preload" href="./assets/fonts/bebas-neue-400-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./assets/fonts/caveat-600-latin.woff2" as="font" type="font/woff2" crossorigin>
     <title>Kubb</title>
-  <script type="module" crossorigin src="./assets/index-CWkhnred.js"></script>
+  <script type="module" crossorigin src="./assets/index-Cdyau_Xw.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/phaser-DkrQsNE3.js">
 </head>
 
@@ -22,6 +22,20 @@
         <div class="splash-title">Kubb</div>
         <div class="splash-line">setting up the lawn<span class="splash-dots"><span>.</span><span>.</span><span>.</span></span></div>
     </div>
+    <script>
+        // If the game hasn't drawn its first screen after 15 seconds, offer a fresh copy instead of a splash that never
+        // ends (Josh's phone, 2026-10-17: it held a page from an earlier publish whose script was gone). The added `r`
+        // skips the phone's cached page; the game ignores it.
+        setTimeout(function () {
+            var s = document.getElementById('splash');
+            if (!s || s.classList.contains('leaving')) return;
+            var b = document.createElement('button');
+            b.className = 'splash-reload';
+            b.textContent = 'Still loading? Tap to reload';
+            b.onclick = function () { var u = new URL(location.href); u.searchParams.set('r', String(Date.now())); location.replace(u.toString()); };
+            s.appendChild(b);
+        }, 15000);
+    </script>
     <div id="app">
         <div id="game-container"></div>
     </div>
