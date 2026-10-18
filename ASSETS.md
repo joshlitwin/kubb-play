@@ -5,6 +5,7 @@ Every asset used in the game, with its source and licence. Only CC0 or clearly l
 | Asset | Source | Licence | Notes |
 | --- | --- | --- | --- |
 | public/favicon.png | Phaser Vite TypeScript template | MIT | |
+| public/icons/*.png (the home-screen icon) | Drawn for this game, 2026-10-18: an HTML page (a king with its crown, the KUBB title in Bebas Neue) rendered by headless Chrome, then resized | Original work; the lettering is Bebas Neue (SIL OFL 1.1, below) | Used by public/manifest.webmanifest and the Apple touch icon. |
 | Fredoka font, weight 600 (the game's font) | Google Fonts: https://fonts.google.com/specimen/Fredoka. Bundled since 2026-10-08: public/assets/fonts/fredoka-600-*.woff2 (Latin and Latin Extended), declared in public/fonts.css; licence text in public/assets/fonts/OFL.txt | SIL Open Font License 1.1 | Rounded font for the cozy look prototype. |
 | Bebas Neue font | Google Fonts: https://fonts.google.com/specimen/Bebas+Neue. Bundled: public/assets/fonts/bebas-neue-400-*.woff2, public/fonts.css, licence in OFL.txt | SIL Open Font License 1.1 | Tall poster lettering for the summer-poster screens (day title cards). |
 | Caveat font, weight 600 (album captions) | Google Fonts: https://fonts.google.com/specimen/Caveat. Bundled: public/assets/fonts/caveat-600-*.woff2, public/fonts.css, licence in OFL.txt | SIL Open Font License 1.1 | A handwriting face for the family album's captions (Josh, 2026-10-07: "let's try the other font"). |

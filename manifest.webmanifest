@@ -1,0 +1,14 @@
+{
+    "name": "Kubb",
+    "short_name": "Kubb",
+    "description": "A top-down Kubb game: a cottage weekend, and matches against friends.",
+    "start_url": "./",
+    "scope": "./",
+    "display": "standalone",
+    "background_color": "#fcf1da",
+    "theme_color": "#fcf1da",
+    "icons": [
+        { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+        { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+    ]
+}

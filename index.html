@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="./favicon.png" />
+    <!-- Add to Home Screen: Kubb opens full screen with its own icon. A phone needs this for notifications (iPhone
+         only sends them to a game added to the Home Screen). -->
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Kubb" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#fcf1da" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css">
     <!-- Fredoka (SIL Open Font Licence), the game's font. See ASSETS.md. -->
@@ -11,7 +19,7 @@
     <link rel="preload" href="./assets/fonts/bebas-neue-400-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./assets/fonts/caveat-600-latin.woff2" as="font" type="font/woff2" crossorigin>
     <title>Kubb</title>
-  <script type="module" crossorigin src="./assets/index-Bi861PNw.js"></script>
+  <script type="module" crossorigin src="./assets/index-DAFbGB2y.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/phaser-DkrQsNE3.js">
 </head>
 
